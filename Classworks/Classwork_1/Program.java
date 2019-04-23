@@ -2,23 +2,24 @@ public class Program{
 	public static void main(String[] args) {
 		int number = 135;
 		int a = number%2;
-		int b = a%2;
-		int c = b%2;
-		int d = c%2;
-		int e = d%2;
-		int f = e%2;
-		int g = f%2;
-		int h = g%2;
-		int i = h%2;
-	System.out.print(a);
-	System.out.print(b);
-	System.out.print(c);
-	System.out.print(d);
-	System.out.print(e);
-	System.out.print(f);
-	System.out.print(g);
-	System.out.print(h);
-	System.out.print(i);
+		number = number / 2;
+		int b = number%2;
+		number = number / 2;
+		int c = number%2;
+		number = number / 2;
+		int d = number%2;
+		number = number / 2;
+		int e = number%2;
+		number = number / 2;
+		int f = number%2;
+		number = number / 2;
+		int g = number%2;
+		number = number / 2;
+		int h = number%2;
+		number = number / 2;
+		int i = number%2;
+		number = number / 2;
+	System.out.print(a + "" + b + "" + c + "" + d + "" + e + "" + f + "" + h + "" + i);
 
 	}
 }
