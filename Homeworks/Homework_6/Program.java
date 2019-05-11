@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Program {
 	
 	public static void main(String[] args) {
@@ -12,23 +13,22 @@ public class Program {
 		
 		int[] arr = new int[UserNumber];
 		
-		int MaxValue = 0;
-		int MinValue = 1000;
+		int MaxValue = arr[0];
+		int MinValue = arr[0];
 		int MaxIndex = 0;
 		int MinIndex = 0;
 					
 		for(int i = 0; i < arr.length; i++) {
-		System.out.println("Input ArrayNumber of index" + "[" + i + "]");
-		ArrNumber = scanner.nextInt();
-		arr[i] = ArrNumber;
-			while(ArrNumber > MaxValue) {
+			System.out.println("Input ArrayNumber of index" + "[" + i + "]");
+			ArrNumber = scanner.nextInt();
+			arr[i] = ArrNumber;
+			if (ArrNumber > MaxValue) {
 				MaxValue = ArrNumber;
 				MaxIndex = i;
-			}
-			while(ArrNumber < MinValue) {
+			} else {
 				MinValue = ArrNumber;
 				MinIndex = i;
-		}
+			  }
 		}
 		
 		System.out.println("--------------------");
@@ -51,8 +51,3 @@ public class Program {
 	}
 }
 	
-
-        
-
-	
-
