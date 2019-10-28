@@ -108,7 +108,7 @@
                     <div class="input-group clearfix">
                         <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
                         <button type="submit" class="primary"><@spring.message 'send'/></button>
-                        <button type="submit" class="primary" onclick="disconnect()"><@spring.message 'disconnect'></button>
+                        <button type="submit" class="primary" onclick="disconnect()"><@spring.message 'disconnect'/></button>
                     </div>
                 </div>
             </form>
@@ -126,4 +126,4 @@
     </div>
 </div>
 </body>
-
+</html>
