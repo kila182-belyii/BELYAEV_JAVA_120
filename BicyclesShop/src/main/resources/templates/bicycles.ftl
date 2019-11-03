@@ -105,12 +105,12 @@
 				<br>
 				<input type="type" name="type" placeholder="<@spring.message 'type'/>" list="typeList" id = "type">
 				<datalist id="typeList">
-					<option value="<@spring.message 'bicycles'/>">
-					<option value="<@spring.message 'parts'/>">
-					<option value="<@spring.message 'accessories'/>">
+					<option value="BICYCLE">
+					<option value="PART">
+					<option value="ACCESSORY">
 				</datalist>
 				<br>
-				<input type="button" value=Add onclick="addArticle('${_csrf.token}', $('#name').val(), $('#price').val(), $('#type').val(), ${user.cartId})"/>
+				<input type="button" value=Add onclick="addArticle('${_csrf.token}', $('#name').val(), $('#price').val(), $('#type').val(), '${user.cartId}')"/>
 			</div>
 		</#if>
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>

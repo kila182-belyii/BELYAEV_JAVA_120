@@ -39,7 +39,6 @@ public class ChatController {
         return chatMessage;
     }
 
-
     @GetMapping(value = "/chat")
     public String addArticlesPageGet(@AuthenticationPrincipal UserDetailsImpl userDetails, Model model) {
         UserDto user = authenticationUtil.getUserByUserDetails(userDetails);

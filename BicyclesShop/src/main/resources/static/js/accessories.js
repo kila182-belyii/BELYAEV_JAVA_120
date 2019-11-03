@@ -5,7 +5,7 @@ function addArticleToCart(csrf, cartId, articleId) {
     };
     const reload = function (response) {
         let cartHtml = document.getElementById('cart');
-        cartHtml["innerHTML"] = '<a href="/cart?cartId='+ cartId + '" ><@spring.message \'cart\'/>(' + response + ') </a>';
+        cartHtml["innerHTML"] = '<a href="/cart?cartId='+ cartId + '" >Cart(' + response + ') </a>';
     };
     $.ajax({
         url: '/cart',
@@ -34,7 +34,7 @@ function addArticle(csrf, name, price, type, cartId) {
             '            <td>' + response["id"] + '</td>\n' +
             '            <td> ' + response["name"] + '</td>\n' +
             '            <td> ' + response["price"] + '</td>\n' +
-            '            <td><a onclick="addArticleToCart(\'' + csrf + '\', ' + cartId + ', ' + response["id"] + ')" href = "#"><@spring.message \'add_to_cart\'/></a></td>\n' +
+            '            <td><a onclick="addArticleToCart(\'' + csrf + '\', ' + cartId + ', ' + response["id"] + ')" href = "#">Add to cart</a></td>\n' +
             '        </tr>'
         );
     };

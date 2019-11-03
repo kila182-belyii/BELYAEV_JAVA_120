@@ -10,9 +10,9 @@ function deleteArticleFromCart(csrf, cartId, articleId) {
         let newArticles = '<thead class="thead-dark">\n' +
             '        <tr>\n' +
             '            <th>ID</th>\n' +
-            '            <th><@spring.message \'name\'/></th>\n' +
-            '            <th><@spring.message \'price\'/></th>\n' +
-            '            <th><@spring.message \'delete_from_cart\'/></th>\n' +
+            '            <th>NAME</th>\n' +
+            '            <th>PRICE</th>\n' +
+            '            <th>DELETE FROM CART</th>\n' +
             '        </tr>\n' +
             '        </thead>';
         for (let i = 0; i < response.length; i++) {
@@ -21,7 +21,7 @@ function deleteArticleFromCart(csrf, cartId, articleId) {
             newArticles += '<td>' + cartArticleDto["articleId"] + '</td>'
             newArticles += '<td>' + cartArticleDto["name"] + '</td>';
             newArticles += '<td>' + cartArticleDto["price"] + '</td>';
-            newArticles += '<td><a onclick="deleteArticleFromCart(\'' + csrf + '\', ' + cartArticleDto["cartId"] + ', ' + cartArticleDto["articleId"] + ')" href = "#"><@spring.message \'delete_from_cart\'/></a></td>';
+            newArticles += '<td><a onclick="deleteArticleFromCart(\'' + csrf + '\', ' + cartArticleDto["cartId"] + ', ' + cartArticleDto["articleId"] + ')" href = "#">Delete from cart</a></td>';
             newArticles += '</tr>';
         }
         articlesListHtml.innerHTML = newArticles;

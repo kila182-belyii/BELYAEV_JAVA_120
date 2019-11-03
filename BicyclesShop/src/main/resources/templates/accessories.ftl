@@ -105,9 +105,9 @@
 				<br>
 				<input type="text" name="type" placeholder="<@spring.message 'type'/>" list="typeList" id = "type">
 				<datalist id="typeList">
-					<option value=<@spring.message 'bicycles'/>>
-					<option value=<@spring.message 'parts'/>>
-					<option value=<@spring.message 'accessories'/>>
+					<option value="BICYCLE">
+					<option value="PART">
+					<option value="ACCESSORY">
 				</datalist>
 				<br>
 				<input type="button" value=Add onclick="addArticle('${_csrf.token}', $('#name').val(), $('#price').val(), $('#type').val(), ${user.cartId})"/>
